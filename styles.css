@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+select, button {
+    padding: 10px;
+    border: none;
+    background-color: #4c6ef5;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.image-container, .generated-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.example-image, .image-with-download {
+    width: calc(50% - 10px);
+    max-width: 500px;
+    position: relative;
+}
+
+.example-image, .generated-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.download-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.download-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke: #4c6ef5;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.loader img {
+    width: 50px;
+    height: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .input-container {
+        flex-direction: column;
+    }
+
+    .example-image, .image-with-download {
+        width: 100%;
+    }
+}

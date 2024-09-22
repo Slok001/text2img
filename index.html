@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator Tool JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Generator by shlok</h1>
+        <p>Convert your text into an image within a second using this powered AI Image Generator tool. and i am making this for my friends</p>
+        
+        <div class="input-container">
+            <input type="text" id="prompt" placeholder="Describe what you want to see">
+            <select id="imageCount">
+                <option value="1">1 Image</option>
+                <option value="2">2 Images</option>
+                <option value="3">3 Images</option>
+                <option value="4" selected>4 Images</option>
+            </select>
+            <select id="styleSelect">
+                <option value="realistic">Realistic</option>
+                <option value="cartoon">Cartoon</option>
+                <option value="abstract">Abstract</option>
+                <option value="watercolor">Watercolor</option>
+            </select>
+            <select id="colorSelect">
+                <option value="vibrant">Vibrant</option>
+                <option value="pastel">Pastel</option>
+                <option value="monochrome">Monochrome</option>
+                <option value="warm">Warm</option>
+                <option value="cool">Cool</option>
+            </select>
+            <button id="generateBtn">Generate</button>
+        </div>
+        
+        <div id="imageContainer" class="image-container">
+            <!-- Example images will be here initially -->
+        </div>
+
+        <div id="generatedImageContainer" class="generated-image-container hidden">
+            <!-- Generated images will be inserted here -->
+        </div>
+
+        <div id="loader" class="loader hidden">
+            <img src="loader.svg" alt="Loading">
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
